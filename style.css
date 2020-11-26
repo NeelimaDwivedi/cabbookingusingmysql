@@ -1,0 +1,290 @@
+body {
+    font-family: Verdana;
+    font-size: 0.8em;
+    background-color: #dfe7ea;
+}
+
+
+/*
+* Common Styles
+*/
+
+#header,
+#main,
+#footer {
+    padding: 10px;
+}
+
+#logo {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.green {
+    background-color: #ccff33;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+#menu,
+#footer-links {
+    list-style: none;
+    overflow: hidden;
+}
+
+#menu li,
+#footer-links li {
+    float: left;
+}
+
+#menu li a:hover,
+#menu li input[type=submit]:hover,
+#menu li a:focus,
+#menu li input[type=submit]:focus,
+#footer-links li a:hover,
+#footer-links li a:focus {
+    background-color: #ccff33;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+#menu li input[type="submit"],
+#menu li a,
+#footer-links li a {
+    margin: 10px 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu li input[type="submit"],
+#menu li a {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#menu li:first-child input[type="submit"],
+#menu li a,
+#footer-links li:first-child a {
+    padding-left: 0px;
+}
+
+#footer-links {
+    padding-top: 50px;
+    width: 30%;
+    margin: 0 auto;
+}
+
+
+/*
+* Home Page
+*/
+
+#main p {
+    font-size: 15px;
+    word-spacing: 2px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+
+/*
+
+
+/*
+*contact-form
+*/
+
+#signupForm label,
+#signinForm label,
+#updateForm label {
+    display: block;
+    margin-top: 10px;
+}
+
+h1 {
+    text-shadow: 2px 2px 4px grey;
+}
+
+#drop,
+#pickup,
+#cab-type,
+#updateForm select,
+#signupForm input[type=date],
+#signupForm input[type=text],
+#signupForm input[type=password],
+#signinForm input[type=text],
+#signinForm input[type=password],
+#updateForm input[type=text],
+#updateForm input[type=password] {
+    margin-left: 10px;
+    padding: 5px 15px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    box-shadow: 2px 2px grey;
+}
+
+#btn,
+#signupForm input[type=text]:hover,
+#signupForm input[type=password]:hover,
+#signupForm input[type=submit]:hover,
+#signinForm input[type=text]:hover,
+#signinForm input[type=submit]:hover,
+#signinForm input[type=password]:hover,
+#updateForm input[type=text]:hover,
+#updateForm input[type=submit]:hover,
+#updateForm input[type=password]:hover {
+    cursor: pointer;
+}
+
+#btn,
+#signupForm input[type=submit],
+#signinForm input[type=submit],
+#updateForm input[type=submit] {
+    width: 50px;
+    background: #ccff33;
+    padding: 8px 14px 10px;
+    border: 1px solid #ccff33;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 100px;
+    display: inline;
+    font-size: 1em;
+    margin: 20px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
+    color: black;
+    -webkit-box-shadow: inset 0px 1px 0px #ccff33, 0px 5px 0px 0px #ccff33, 0px 10px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #ccff33, 0px 5px 0px 0px #ccff33, 0px 10px 5px #999;
+    box-shadow: inset 0px 1px 0px #ccff33, 0px 5px 0px 0px #ccff33, 0px 10px 5px #999;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#errors li {
+    color: red;
+}
+
+#wrapmain1 {
+    background-color: white;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 0px 80px;
+}
+
+#user1,
+#main1 {
+    display: block;
+}
+
+
+/* #main1 {
+    background-image: url('bg1.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+#adminAction {
+    display: block;
+    margin: 30px 30px;
+}
+
+#adminAction input[type="submit"] {
+    width: 500px;
+    background: #ccff33;
+    padding: 8px 14px 10px;
+    border: 1px solid #ccff33;
+    cursor: pointer;
+    font-size: 1.2em;
+    display: block;
+    max-width: 60%;
+    margin: 20px auto 0px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
+    color: black;
+    -webkit-box-shadow: inset 0px 1px 0px #ccff33, 0px 5px 0px 0px #ccff33, 0px 10px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #ccff33, 0px 5px 0px 0px #ccff33, 0px 10px 5px #999;
+    box-shadow: inset 0px 1px 0px #ccff33, 0px 5px 0px 0px #ccff33, 0px 10px 5px #999;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#adminAction input[type="submit"]:hover {
+    background: yellow;
+}
+
+#user1 tr th,
+#user1 tr td,
+.user tr th,
+.user tr td {
+    padding: 10px 20px;
+    background-color: #C8C8C8;
+}
+
+.wrap {
+    padding: 30px;
+    padding-left: 30px;
+}
+
+.wrap h2 {
+    background-color: #C8C8C8;
+    padding-left: 520px;
+    width: 54%;
+}
+
+#wrapmain1 #updtdetails {
+    padding-left: 40px;
+}
+
+#managewrap,
+#main1,
+#adminwrap {
+    background-color: white;
+    padding: 10px;
+    margin: 0px 60px;
+    border-radius: 6px;
+}
+
+#user1 {
+    padding-left: 0px;
+}
+
+#wrapuser1 h2,
+#main1 h1,
+#signupForm,
+#signinForm,
+#updateForm,
+#main1 h2 {
+    padding-left: 450px;
+}
+
+#wrapuser1 {
+    padding: 40px;
+}
+
+#wrapuser1 h2 {
+    background-color: #C8C8C8;
+    width: 57%;
+}
+
+.material-icons {
+    color: #545454;
+}
+
+#menu form #left {
+    float: left;
+    margin-left: 1000px;
+    background-color: #ccff33;
+}
