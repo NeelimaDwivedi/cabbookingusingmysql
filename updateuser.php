@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
     <h2>Update</h2>
         <form id="updateForm" action="updateuser.php" method="POST" enctype="multipart/form-data">
             <label for="name">Name:<input type="text" value="<?php echo $_SESSION['userdata']['name']; ?>" name="name"></label>
-            <label for="username">Username:<input type="text" value="<?php echo $_SESSION['userdata']['user_name']; ?>" name="username"></label>
+            <label for="username">Username:<input type="text" value="<?php echo $_SESSION['userdata']['user_name']; ?>" name="username" disabled></label>
             <label for="password">Password:<input type="password" value="<?php echo $_SESSION['userdata']['passwrd']; ?>" name="password"></label>
             <label for="repassword">Re-Password:<input type="password" value="<?php echo $_SESSION['userdata']['passwrd']; ?>" name="repassword"></label>
             <label for="mobile">Mobile:<input type="text" value="<?php echo $_SESSION['userdata']['mobile']; ?>"  name="mobile"></label>

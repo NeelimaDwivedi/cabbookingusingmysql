@@ -1,4 +1,5 @@
 <?php
+//session_start();
 class dbconnection{
     public $servername;
     public $user;

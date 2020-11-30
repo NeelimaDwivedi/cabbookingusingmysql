@@ -76,6 +76,10 @@ body {
     padding-left: 0px;
 }
 
+#footer {
+    clear: left;
+}
+
 #footer-links {
     padding-top: 50px;
     width: 30%;
@@ -190,7 +194,7 @@ h1 {
 
 
 /* #main1 {
-    background-image: url('bg1.jpg'); 
+    background-image: url('bg1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 } */
@@ -227,7 +231,17 @@ h1 {
 
 #user1 tr th,
 #user1 tr td,
+.managerides tr td,
+.managerides tr th,
+.managelocation tr th,
+.managelocation tr td,
+.invoice tr td,
+.invoice tr th,
+.history tr th,
+.history tr td,
 .user tr th,
+.users tr th,
+.users tr td,
 .user tr td {
     padding: 10px 20px;
     background-color: #C8C8C8;
@@ -253,12 +267,16 @@ h1 {
 #adminwrap {
     background-color: white;
     padding: 10px;
-    margin: 0px 60px;
+    margin: 0px 10px;
     border-radius: 6px;
 }
 
 #user1 {
     padding-left: 0px;
+}
+
+.users {
+    margin-left: 70px;
 }
 
 #wrapuser1 h2,
@@ -288,3 +306,157 @@ h1 {
     margin-left: 1000px;
     background-color: #ccff33;
 }
+
+.managerides {
+    margin-left: 130px;
+}
+
+.managelocation {
+    margin-left: 250px;
+}
+
+.history,
+.invoice {
+    margin-left: 200px;
+}
+
+.managelocheading {
+    margin-left: 80px;
+}
+
+.h2heading {
+    margin-left: 130px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #ccff33;
+    color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown1-content  li input[type=submit],
+.dropdown-content li  input[type=submit]{
+    border: none;
+    background: none;
+    padding: 10px;
+}
+.dropdown-content li {
+    list-style-type: none;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+
+}
+
+.dropdown-content li:hover,
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.section {
+    margin-top: 20px;
+    display: block;
+    height: 300px;
+    width: 300px;
+    float: left;
+    margin-left: 20px;
+}
+
+.section b {
+    margin-left: 130px;
+    font-size: 100px;
+}
+
+.blue {
+    background-color: lightblue;
+}
+
+.orange a,
+.yellow a,
+.blue a {
+    color: black;
+    text-decoration: none;
+}
+
+a h2 {
+    text-align: center;
+}
+#earn {
+    font-size:75px;
+    margin-left: 20px;
+}
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+    margin-top:10px;
+  }
+.dropdown1 span {
+    background-color: #ccff33;
+    padding: 10px;
+
+}
+
+  .dropdown1-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 10;
+  }
+  .dropdown1-content li {
+      list-style-type: none;
+      padding: 10px;
+  }
+  .dropdown1:hover .dropdown1-content {
+    display: block;
+  }

@@ -3,12 +3,11 @@ $errors=array();
 require_once 'db_config.php';
 require_once 'user.php';
 if (isset($_POST['submit'])) {
-    $username=$_POST['username'];
-    $password=$_POST['password'];
-
+    $user_name=$_POST['username'];
+    $passwrd=$_POST['password'];
     $User= new User();
     $dbconn=new  dbconnection();
-    $sql=$User->login($username, $password, $dbconn->conn);
+    $sql=$User->login($user_name, $passwrd, $dbconn->conn);
     echo $sql;
 }
 if (isset($_POST['registerpage'])) {

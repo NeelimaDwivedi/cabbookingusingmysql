@@ -31,9 +31,7 @@ if (isset($_POST['booknow'])) {
     
     
 }
-// if (isset($_POST['booknow'])) {
-//     header('Location:invoice.php');
-// }
+
 
     
 ?>
@@ -112,7 +110,7 @@ if (isset($_POST['booknow'])) {
     <div id="main1">
         <h1>Book Rides</h1>
         <form id="signupForm" action="" method="POST" enctype="multipart/form-data">
-            <label for="date">Ride Date:<input type="date" id="date" name="date" min=""></label>
+            <label for="date">Ride Date:<input type="date" id="date" name="date"></label>
             <label for="pickup">Pickup
             <select name="pickup" id="pickup">
             <option value="">--select--</option>
@@ -146,10 +144,6 @@ if (isset($_POST['booknow'])) {
         </form>
     </div>
 </body>
-<script>
-    let today = new Date().toISOString().slice(0, 10);
-     document.getElementById('date').setAttribute('min',today);
-</script>
 </html>
 <?php 
 require_once 'footer.php';

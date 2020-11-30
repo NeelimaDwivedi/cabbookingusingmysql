@@ -1,0 +1,81 @@
+Admin menus-
+
+Home
+Rides
+	- Pending rides
+	- Completed rides
+	- Canceled rides
+	- All Rides
+Users
+	- Pending user request
+	- Approved User Request
+	- All User 
+Location
+	- Location List
+	- Add New Location
+Account
+	- ChangePassword
+
+
+User Menus:
+
+Home
+Book new ride
+Rides
+	- Pedning Rides
+	- Completed Rides
+	- All Rides
+Account
+	- Update information
+	- Change Password
+	
+	
+	
+	
+	
+function edit_user($user_id, $name, $mobile, $isblock, $conn)
+	{
+		 $errors=array();
+       
+        
+		if ($name=='') {
+			$errors[] =array( 'msg'=>'Name is required');
+		} else {
+			if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
+				$errors[]=array('msg'=>'Only letters and white space allowed in username') ;
+			}
+		}
+        
+		if ($mobile=='') {
+			$errors[] =array('msg'=>'mobile is required');
+		} else {
+			if (!is_numeric($mobile)) {
+				$errors[]=array('msg'=>'Invalid mobile no. format');
+			}
+		}
+		return $errors;
+		   // return $res;
+		 //   if ($conn->query($sql) === true) {
+                 
+				// $sql1= "SELECT * FROM users where `user_id`='".$user_id."'";
+				// $res = $conn->query($sql1);
+				// if ($res->num_rows > 0) {
+				//     while ($row = $res->fetch_assoc()) {
+				//         if ($row['isblock']==0) {
+				//             $sql="UPDATE users SET `dateofsignup`=now()  WHERE  `user_id`='".$user_id."' " ;
+				//             if ($conn->query($sql) === true) {
+				//             }
+				//         }
+				//         $_SESSION['useredit'] = array('name' => $row['name'],'user_name' => $row['user_name'],'user_id' => $row['user_id'], 'password'=> $row['passwrd'], 'mobile'=>$row['mobile'], 'is_admin'=>$row['is_admin'],'isblock'=>$row['isblock'] );
+				//         echo '<h2>Your data for the user'.' '.$_SESSION['useredit']['user_name'].' is updated</h2>' ;
+				//     }
+				// } else {
+				//     $errors[]=array('input'=>'form','msg'=>'Invalid Updation');
+				// }
+		 //   } else {
+		   //     echo "Error updating record: " . $conn->error;
+			//}
+            
+	   // }
+		//return  $errors;
+   // }

@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
 	<title>
 		Add Location
     </title>
-    <link type="text/css" rel="stylesheet" href="style.css">
+   
 </head>
 <body>
     <div id="errors">

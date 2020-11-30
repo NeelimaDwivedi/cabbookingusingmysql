@@ -1,37 +1,33 @@
-<?php
-require_once 'adminheader.php';
-echo '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">';
+<?php require_once 'header.php';
 $sql=array();
 $user_id=$_SESSION['userdata']['user_id'];
 $Ride= new Ride();
 $dbconn=new  dbconnection();
-$sql=$Ride->manage_rides($dbconn->conn);
-if (isset($_GET['delete'])) {
-    $ride_id=$_GET['delete'];
-    $sql=$Ride->delete_rides($ride_id, $dbconn->conn);
-
-}
+$sql=$Ride->display_allrides($user_id, $dbconn->conn);
 
 if (isset($_POST['month-asc'])) {
-    $sql=$Ride->display_allmonthwiseasc($dbconn->conn);
+    $sql=$Ride->display_monthwiseasc($user_id, $dbconn->conn);
 }
 if (isset($_POST['month-desc'])) {
-    $sql=$Ride->display_allmonthwisedesc($dbconn->conn);
+    $sql=$Ride->display_monthwisedesc($user_id, $dbconn->conn);
 }
 
 if (isset($_POST['date-asc'])) {
-    $sql=$Ride->display_alldatewiseasc($dbconn->conn);
+    $sql=$Ride->display_datewiseasc($user_id, $dbconn->conn);
 }
 if (isset($_POST['date-desc'])) {
-    $sql=$Ride->display_alldatewisedesc($dbconn->conn);
+    $sql=$Ride->display_datewisedesc($user_id, $dbconn->conn);
 }
 
 if (isset($_POST['price-asc'])) {
-    $sql=$Ride->display_allpricewiseasc($dbconn->conn);
+    $sql=$Ride->display_pricewiseasc($user_id, $dbconn->conn);
 }
 if (isset($_POST['price-desc'])) {
-    $sql=$Ride->display_allpricewisedesc($dbconn->conn);
+    $sql=$Ride->display_pricewisedesc($user_id, $dbconn->conn);
 }
+
+
+
 
 ?>
 <!DOCTYPE html>
@@ -54,8 +50,9 @@ if (isset($_POST['price-desc'])) {
         </form>
       </div>
     </div>
-    <h2 class="h2heading">All Rides</h2>
-    <table class="managerides">
+
+    <h2 class="h2heading">All rides</h2>
+    <table class="history">
 
         <thead>
             <tr>
@@ -66,7 +63,6 @@ if (isset($_POST['price-desc'])) {
             <th>Luggage Price</th>
             <th>Total Fare</th>
             <th>Ride Status</th>
-            <th colspan="2">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -90,9 +86,6 @@ if (isset($_POST['price-desc'])) {
         if ($v['status']==2) {
             echo '<td>Complete</td>';
         }
-        echo "<td><a href='editrides.php?edit= $v[ride_id]'><i class='material-icons'>edit</i></a></td>" ;
-        echo "<td><a href='managerides.php?delete= $v[ride_id]'><i class='material-icons'>delete</i></a></td>" ;
-
         echo '</tr>';
 
     }
@@ -102,7 +95,4 @@ if (isset($_POST['price-desc'])) {
     </div>
 </body>
 </html>
-
-<?php
-require_once '../footer.php';
-?>
+<?php require_once 'footer.php'; ?>

@@ -4,12 +4,8 @@ echo '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="
 $sql=array();
 $User= new User();
 $dbconn=new  dbconnection();
-$sql=$User->manage_user($dbconn->conn);
-if (isset($_GET['delete'])) {
-    $user_id=$_GET['delete'];
-    $sql=$User->delete_users($user_id, $dbconn->conn);
+$sql=$User->display_approveduser($dbconn->conn);
 
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,8 +14,8 @@ if (isset($_GET['delete'])) {
 </head>
 <body>
     <div id="main1">
-    <h2 class="h2heading">All Users</h2>
-    <table class="user">
+    <h2 class="h2heading">Approved Users</h2>
+    <table class=" users">
 
         <thead>
             <tr>
@@ -31,7 +27,6 @@ if (isset($_GET['delete'])) {
             <th>Status</th>
             <th>Password</th>
             <th>Role</th>
-            <th colspan="2">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -58,10 +53,7 @@ if (isset($_GET['delete'])) {
         }
         if ($v['is_admin']==0) {
             echo '<td>User</td>';
-        }
-        echo "<td><a href='edituser.php?edit= $v[user_id]'><i class='material-icons'>edit</i></a></td>" ;
-        echo "<td><a href='manageuser.php?delete= $v[user_id]'><i class='material-icons'>delete</i></a></td>" ;
-                
+        }        
         echo '</tr>';
 
     }
